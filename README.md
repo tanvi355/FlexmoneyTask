@@ -72,4 +72,13 @@ The `paid_user_id` attribute denotes the id of the user who has completed the pa
 ![image](https://user-images.githubusercontent.com/56465105/207318289-12459964-f943-4529-babd-aa971b7465da.png)
 
 
+## To run the project on local system
+
+1. Fork and clone this repository or download the code.
+
+2. In your command prompt, navigate to `FlexmoneyTask`.
+
+3. Run this app using the command `python app.py`.
+
+4. Now, navigate to http://127.0.0.1:5000/ in your web browser to use the app.
 

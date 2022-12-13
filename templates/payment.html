@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+	<div class="alert alert-success">
+		Well done! You have successfully registered. <b>Please make the payment to confirm your enrollment. </b> 
+		<br>
+		You may have enrolled on any day, but you need to pay for the whole month.
+	</div>
+	<div class="fees">
+		<!--Fee amount-->
+		<label class="form-label" for="disabledInput">Fees</label>
+		<input class="form-control" name = "fee" id="disabledInput" type="text" placeholder="Rs. 500 /-" disabled="">
+	</div>
+	
+</div>
+<div class="row">
+	<div class="col-md-2">
+		&nbsp;
+	</div>
+	
+	<div class="col-md-4">
+		<!--Payment form starts-->
+		<form action="/payment_done" method="POST">
+			<fieldset>
+				<div class="form-group">
+					<div class="row">
+						<!--Bank Name-->
+						<label for="exampleSelect1" class="form-label mt-4">Bank Name</label>
+						<select class="form-select" name= "bank" id="exampleSelect1" required>
+							<option>Axis Bank</option>
+							<option>IDBI Bank</option>
+							<option>ICICI Bank</option>
+							<option>State Bank of India</option>
+						</select>
+						<br>
+						<!--Payment Method-->
+						<label for="exampleSelect1" class="form-label mt-4">Payment Method</label>
+						<select class="form-select" name="mode" id="exampleSelect1" required>
+							<option>Credit Card</option>
+							<option>Debit Card</option>
+						</select>
+						<br>
+						<!--Card Number-->
+						<label for="exampleInputName" class="form-label mt-4">Card Number</label>
+						<input type="text" name="card_no" pattern="\d*" minlength="12" maxlength="12" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Card Number" required>
+						<br>
+					</div>
+				</div>
+				</div>
+				&nbsp;
+					<div class="col-md-4">
+						<div class="form-group">
+							<div class="row">
+								<!--Name-->
+								<label for="exampleInputName" class="form-label mt-4">Name</label>
+								<input type="text" name="payer_name" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Enter your name" required>
+								<br> 
+								<!--Expiry Date-->
+								<label for="exampleInputName" class="form-label mt-4">Expiry Date</label>
+								<input type="date" class="form-control" id="exampleInputName" aria-describedby="emailHelp" required>
+								<br> 
+								<!--CVV-->
+								<label for="exampleInputName" class="form-label mt-4">CVV</label>
+								<input type="password" maxlength="3" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="CVV" required>
+								<br>
+							</div>
+						</div>
+					</div>
+			</fieldset>
+			</div>
+			<br><br>
+			<center>
+				<button type="submit" class="btn btn-primary btn-lg">Pay Now</button>
+			</center>
+		</form>
+		<!--Payment form ends-->
+	</div>
+
+<div class="col-md-2">
+	&nbsp;
+</div>
+
+{% endblock %}

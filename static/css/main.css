@@ -1,0 +1,42 @@
+body{
+    background-color:skyblue;
+    color: black;
+}
+
+h1, h2, h4 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+blockquote, figcaption{
+    text-align: center;
+    font-size: larger;
+    margin-top: 15px;
+}
+  
+p, .tanvi{
+    text-align: center;
+}
+
+img{
+    width: auto;
+    height: 220px;
+}
+
+footer {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+  
+.alert{
+    width: 80%;
+    margin-left: 160px;
+}
+
+.fees{
+    width: 69%;
+    margin-left:240px;
+}

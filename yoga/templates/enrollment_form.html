@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Enrollment Form</h2>
+<div class="row">
+	<div class="col-md-2">
+		&nbsp;
+	</div>
+	<div class="col-md-4">
+		<!--Grammarly extension -->
+		<grammarly-extension data-grammarly-shadow-root="true" style="mix-blend-mode: darken; position: absolute; top: 0px; left: 0px; pointer-events: none;" class="cGcvT"></grammarly-extension>
+		<!--Enrollment Form starts-->
+		<form action="/payment" method="POST">
+			<fieldset>
+				<div class="form-group">
+					<div class="row">
+						<!--Email-->
+						<label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
+						<input type="email" name="email_id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+						<br>
+						<!--Name-->
+						<label for="exampleInputName" class="form-label mt-4">Name</label>
+						<input type="text" name = "user_name" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Enter your name" required>
+						<br>    
+						<!--Age-->
+						<label for="exampleInputName" class="form-label mt-4">Age</label>
+						<input type="number" name="user_age" min="18" max="65" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Enter your age" required>
+						<br> 
+					</div>
+				</div>
+				</div>
+					&nbsp;
+					<div class="col-md-4">
+						<div class="form-group">
+							<div class="row">
+								<!--Mobile-->
+								<label for="exampleInputName" class="form-label mt-4">Mobile Number</label>
+								<input type="text" name="phone" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Mobile number" required>
+								<br>
+								<!--Batch-->
+								<label for="exampleSelect1" class="form-label mt-4">Select a batch</label>
+								<select class="form-select" name="batch" id="exampleSelect1" required>
+								<option>1 (6:00 AM - 7:00 AM)</option>
+								<option>2 (7:00 AM - 8:00 AM)</option>
+								<option>3 (8:00 AM - 9:00 AM)</option>
+								<option>4 (5:00 AM - 6:00 PM)</option>
+								</select>
+								<br>
+								<!--Date-->
+								<label for="exampleInputName" class="form-label mt-4">Date of Registration</label>
+								<input type="date" name="enrollment_date" class="form-control" id="date_picker" aria-describedby="emailHelp" required>		
+							</div>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+			<br><br>
+			<center>
+			<button type="submit" class="btn btn-primary btn-lg">Register</button>
+			</center>
+		</form>
+		<!--Enrollment form ends-->
+	</div>
+
+<div class="col-md-2">
+	&nbsp;
+</div>
+
+{% endblock %}
